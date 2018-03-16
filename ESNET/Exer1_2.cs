@@ -20,19 +20,28 @@ namespace ESNET
 
         private void button1_Click(object sender, EventArgs e)
         {
+            movies_list.Items.Clear();
+
             string conS = "Data source = (local); initial catalog = Dafesty;" +
                 "integrated security = SSPI";
 
             SqlConnection cn = new SqlConnection(conS);
             cn.Open();
 
-            string sql = "Select movieTitle from movies";
+            string sql = "Select movieTitle, rating from movies";
             SqlCommand cm = new SqlCommand(sql, cn);
 
             SqlDataReader rd = cm.ExecuteReader();
             while (rd.Read())
             {
-                movies_list.Items.Add(rd[0].ToString());
+                if (rd["rating"].ToString() == rating_tb.Text)
+                {
+                    movies_list.Items.Add(rd["MovieTitle"].ToString());
+                } else if (rating_tb.Text == "")
+                {
+                    movies_list.Items.Add(rd["MovieTitle"].ToString());
+                }
+                                    
             }
 
             rd.Close();
