@@ -57,6 +57,12 @@
     <Compile Include="Exer1_1.Designer.cs">
       <DependentUpon>Exer1_1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Exer1_3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Exer1_3.Designer.cs">
+      <DependentUpon>Exer1_3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Exer1_1.resx">
@@ -64,6 +70,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Exer1_2.resx">
       <DependentUpon>Exer1_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Exer1_3.resx">
+      <DependentUpon>Exer1_3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

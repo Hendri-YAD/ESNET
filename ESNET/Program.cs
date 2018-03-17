@@ -16,7 +16,7 @@ namespace ESNET
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Exer1_2());
+            Application.Run(new Exer1_3());
         }
     }
 }
